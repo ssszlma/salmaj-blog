@@ -1,0 +1,73 @@
+.blog pre {
+  @apply rounded p-4 text-xs shadow;
+}
+
+.blog h1 {
+  @apply my-3 block text-2xl font-bold;
+}
+
+.blog h2 {
+  @apply my-3 text-xl font-bold;
+}
+
+.blog h3 {
+  @apply my-3 text-xl;
+}
+
+.blog h4 {
+  @apply my-3 text-lg;
+}
+
+.blog h5 {
+  @apply my-3 text-base;
+}
+
+.blog h6 {
+  @apply my-3 text-sm;
+}
+
+.blog blockquote {
+  @apply border-l-2 pl-3;
+}
+
+.blog table {
+  @apply border-collapse border border-white/30;
+}
+
+.blog th {
+  @apply border-collapse border border-white/30 text-start;
+}
+
+.blog td {
+  @apply border-collapse border border-white/30 text-start;
+}
+
+.blog th,
+.blog td {
+  @apply p-2;
+}
+
+.blog ol {
+  @apply list-decimal pl-4;
+}
+
+.blog ul {
+  @apply list-disc pl-4;
+}
+
+.blog mark {
+  @apply bg-yellow-400/80 px-2;
+}
+
+.blog a {
+  @apply underline transition-colors duration-500 hover:text-blue-500;
+}
+
+.blog sup {
+  @apply pl-1 transition-colors duration-500 hover:text-blue-500;
+}
+
+.blog b,
+.blog strong {
+  @apply font-bold text-purple-400;
+}

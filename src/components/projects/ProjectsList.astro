@@ -1,0 +1,63 @@
+---
+import { PROJECTS_DATA } from "@/data/projects";
+
+import CardList from "@/components/card/CardList.astro";
+import CardItem from "@/components/card/CardItem.astro";
+import CardTitle from "@/components/card/CardTitle.astro";
+import CardDescription from "@/components/card/CardDescription.astro";
+import Badge from "@/components/Badge.astro";
+
+import ProjectTechsList from "./ProjectTechsList.astro";
+import ProjectTechItem from "./ProjectTechItem.astro";
+---
+
+{
+  PROJECTS_DATA.length > 0 && (
+    <>
+      <CardList>
+        {PROJECTS_DATA.map((project) => (
+          <CardItem href={project.href}>
+            <div
+              class:list={[
+                "flex flex-col md:flex-row items-start gap-1 md:gap-3",
+                {
+                  "mb-1 md:mb-3": project.description,
+                },
+              ]}
+            >
+              <CardTitle classes="flex md:items-center gap-3 flex-col md:flex-row">
+                {project.isComingSoon && <Badge>Soon</Badge>}
+                {project.title}
+              </CardTitle>
+
+              {project.techs && (
+                <ProjectTechsList>
+                  {project.techs.map((tech, index) => (
+                    <>
+                      <ProjectTechItem>{tech}</ProjectTechItem>
+                      {project.techs && project.techs.length - 1 !== index && (
+                        <ProjectTechItem>&bull;</ProjectTechItem>
+                      )}
+                    </>
+                  ))}
+                </ProjectTechsList>
+              )}
+            </div>
+
+            {project.description && (
+              <CardDescription useTextEllipsis={false}>
+                {project.description}
+              </CardDescription>
+            )}
+          </CardItem>
+        ))}
+      </CardList>
+    </>
+  )
+}
+
+{
+  PROJECTS_DATA.length === 0 && (
+    <div>There's nothing yet, come back later :)</div>
+  )
+}

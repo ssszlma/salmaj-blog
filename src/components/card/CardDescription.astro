@@ -1,0 +1,18 @@
+---
+interface Props {
+  useTextEllipsis?: boolean;
+}
+
+const { useTextEllipsis = true } = Astro.props;
+---
+
+<p
+  class:list={[
+    "text-sm",
+    {
+      "overflow-hidden text-ellipsis whitespace-nowrap": useTextEllipsis,
+    },
+  ]}
+>
+  <slot />
+</p>

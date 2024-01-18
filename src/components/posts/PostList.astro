@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import moment from "moment";
+
+import CardList from "@/components/card/CardList.astro";
+import CardItem from "@/components/card/CardItem.astro";
+import CardTitle from "@/components/card/CardTitle.astro";
+import CardDescription from "@/components/card/CardDescription.astro";
+
+import PostItemDate from "./PostItemDate.astro";
+
+interface Props {
+  useAllPosts?: boolean;
+}
+
+const { useAllPosts = false } = Astro.props;
+
+const allPosts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+let posts = useAllPosts ? allPosts : allPosts.slice(0, 3);
+---
+
+{
+  posts.length > 0 && (
+    <>
+      <CardList>
+        {posts.map((post) => (
+          <CardItem href={`/blog/${post.slug}`} target="_self">
+            <CardTitle classes="flex flex-col gap-1 mb-1 md:mb-3 md:gap-3 md:flex-row md:items-center md:flex-wrap">
+              {post.data.title}
+              <PostItemDate>
+                {moment(post.data.pubDate).format("DD/MM/YYYY")}
+              </PostItemDate>
+            </CardTitle>
+            <CardDescription>{post.data.description}</CardDescription>
+          </CardItem>
+        ))}
+      </CardList>
+    </>
+  )
+}
+
+{posts.length === 0 && <div>There's nothing yet, come back later :)</div>}

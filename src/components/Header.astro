@@ -1,0 +1,22 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+
+import { PATHS_DATA } from "@/data/paths";
+---
+
+<header class="max-w-[768px] mx-auto px-3">
+  <nav>
+    <ul class="flex items-center gap-3">
+      {
+        PATHS_DATA.map((path, index) => (
+          <>
+            <li>
+              <HeaderLink href={path.path}>{path.name}</HeaderLink>
+            </li>
+            {index !== PATHS_DATA.length - 1 && <li>&bull;</li>}
+          </>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

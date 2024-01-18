@@ -1,0 +1,18 @@
+---
+import { LINKS_DATA } from "@/data/links";
+
+import Link from "./Link.astro";
+---
+
+<ul class="flex items-center gap-3 flex-wrap">
+  {
+    LINKS_DATA.map((link, index) => (
+      <>
+        <li>
+          <Link href={link.path}>{link.name}</Link>
+        </li>
+        {index !== LINKS_DATA.length - 1 && <li>&bull;</li>}
+      </>
+    ))
+  }
+</ul>

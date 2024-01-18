@@ -1,0 +1,13 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Title from "@/components/Title.astro";
+import PostList from "@/components/posts/PostList.astro";
+---
+
+<Layout title="Blog" description="My awesome blog!">
+  <Title>Blog</Title>
+
+  <section class="mt-10">
+    <PostList useAllPosts={true} />
+  </section>
+</Layout>

@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from "astro:content";
+import moment from "moment";
+
+import Layout from "@/layouts/Layout.astro";
+
+import Title from "@/components/Title.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, pubDate } = Astro.props;
+---
+
+<Layout title={`${title} / Blog`} description={description}>
+  <article>
+    <div class="flex flex-col gap-3">
+      <Title>{title}</Title>
+
+      <div class="blog flex flex-col gap-3">
+        <time datetime={pubDate.toISOString()} class="block">
+          {moment(pubDate).format("DD/MM/YYYY")}
+        </time>
+
+        <slot />
+      </div>
+    </div>
+  </article>
+</Layout>
