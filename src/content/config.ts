@@ -6,7 +6,12 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),
-    // TODO: add tags
+    tags: z
+      .array(z.string())
+      .refine((items) => new Set(items).size === items.length, {
+        message: "tags must be unique",
+      })
+      .optional(),
   }),
 });
 

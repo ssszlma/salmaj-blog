@@ -1,0 +1,18 @@
+---
+import PostTagItem from "./PostTagItem.astro";
+
+import type { TTagList } from "@/types/tags";
+
+interface Props {
+  tags: TTagList;
+  classes?: string;
+}
+
+const { tags, classes } = Astro.props;
+---
+
+<ul
+  class=`!pl-0 !list-none flex items-center gap-3 flex-wrap text-white/60 ${classes}`
+>
+  {tags.map((tag) => <PostTagItem>{tag}</PostTagItem>)}
+</ul>
