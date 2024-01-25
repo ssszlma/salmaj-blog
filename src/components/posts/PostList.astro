@@ -8,6 +8,7 @@ import CardTitle from "@/components/card/CardTitle.astro";
 import CardDescription from "@/components/card/CardDescription.astro";
 
 import PostItemDate from "./PostItemDate.astro";
+import PostTagList from "./PostTagList.astro";
 
 interface Props {
   useAllPosts?: boolean;
@@ -20,6 +21,9 @@ const allPosts = (await getCollection("blog")).sort(
 );
 
 let posts = useAllPosts ? allPosts : allPosts.slice(0, 3);
+
+const titleDefaultClasses =
+  "flex flex-col gap-1 md:gap-3 md:flex-row md:items-center md:flex-wrap";
 ---
 
 {
@@ -28,12 +32,23 @@ let posts = useAllPosts ? allPosts : allPosts.slice(0, 3);
       <CardList>
         {posts.map((post) => (
           <CardItem href={`/blog/${post.slug}`} target="_self">
-            <CardTitle classes="flex flex-col gap-1 mb-1 md:mb-3 md:gap-3 md:flex-row md:items-center md:flex-wrap">
+            <CardTitle
+              classes={
+                post.data.tags
+                  ? `${titleDefaultClasses} mb-1`
+                  : `${titleDefaultClasses} mb-1 md:mb-3`
+              }
+            >
               {post.data.title}
               <PostItemDate>
                 {moment(post.data.pubDate).format("DD/MM/YYYY")}
               </PostItemDate>
             </CardTitle>
+
+            {post.data.tags && (
+              <PostTagList tags={post.data.tags} classes="mb-1 md:mb-3" />
+            )}
+
             <CardDescription>{post.data.description}</CardDescription>
           </CardItem>
         ))}

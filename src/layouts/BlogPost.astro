@@ -5,10 +5,11 @@ import moment from "moment";
 import Layout from "@/layouts/Layout.astro";
 
 import Title from "@/components/Title.astro";
+import PostTagList from "@/components/posts/PostTagList.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate } = Astro.props;
+const { title, description, pubDate, tags } = Astro.props;
 ---
 
 <Layout title={`${title} / Blog`} description={description}>
@@ -22,6 +23,8 @@ const { title, description, pubDate } = Astro.props;
         </time>
 
         <slot />
+
+        {tags && <PostTagList tags={tags} classes="mt-6" />}
       </div>
     </div>
   </article>
