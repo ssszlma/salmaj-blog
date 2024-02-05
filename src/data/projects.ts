@@ -34,7 +34,7 @@ export const PROJECTS_DATA: TProjectItem[] = [
   {
     title: "More",
     href: "https://github.com/sa1l1?tab=repositories",
-    description: "More (old) projects available on my github!",
+    description: "Older projects available on my github!",
     techs: [" "],
   },
 
