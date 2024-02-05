@@ -4,7 +4,7 @@ export const PROJECTS_DATA: TProjectItem[] = [
 
   {
     title: "TTT Betting",
-    description: "Crypto betting ticatactoe game. Built with Gear. 2023 EasyA x Polkadot Hackathon Submission (finalist).",
+    description: "Crypto betting ticatactoe game. 2023 EasyA x Polkadot Hackathon Submission (finalist). Built with Gear alongside my teammates.",
     href: "https://github.com/sa1l1/TTT_Betting",
     techs: ["Gear", "Web3", "Crypto", "Blockchain"],
   },
@@ -18,10 +18,10 @@ export const PROJECTS_DATA: TProjectItem[] = [
   },
 
   {
-    title: "Trivium",
-    href: "https://github.com/sa1l1/mites-python-project",
-    description: "Final project for the MITES Saturdays Computer Science program.",
-    techs: ["Tkinter", "Python", "Game Development"],
+    title: "More",
+    href: "https://github.com/sa1l1?tab=repositories",
+    description: "More (old) projects available on my github!",
+    techs: [" "],
   },
 
   {
