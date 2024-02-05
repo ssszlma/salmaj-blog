@@ -36,7 +36,7 @@ import ProjectTechItem from "./ProjectTechItem.astro";
                     <>
                       <ProjectTechItem>{tech}</ProjectTechItem>
                       {project.techs && project.techs.length - 1 !== index && (
-                        <ProjectTechItem>&bull;</ProjectTechItem>
+                        <ProjectTechItem> | </ProjectTechItem>
                       )}
                     </>
                   ))}

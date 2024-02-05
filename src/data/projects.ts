@@ -1,29 +1,44 @@
 import type { TProjectItem } from "@/types/projects";
 
 export const PROJECTS_DATA: TProjectItem[] = [
+
   {
-    title: "Project 1",
+    title: "TTT Betting",
+    description: "Crypto betting ticatactoe game. Built with Gear. 2023 EasyA x Polkadot Hackathon Submission (finalist).",
+    href: "https://github.com/sa1l1/TTT_Betting",
+    techs: ["Gear", "Web3", "Crypto", "Blockchain"],
+  },
+
+  {
+    title: "SkinCheck",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    href: "#",
-    techs: ["React", "TypeScript"],
+      "Skin Disease Detection app using AI Image Classification. Built with AppInventor alongside my Hackathon team from the MIT Futuremakers summer program.",
+    href: "https://github.com/sa1l1/skincheck",
+    techs: ["App", "AI", "Image Classification"],
   },
+
   {
-    title: "Project 2",
-    description: "Interdum consectetur libero id faucibus nisl tincidunt",
-    href: "#",
-    techs: ["Astro", "TypeScript", "TailWindCSS"],
+    title: "Trivium",
+    href: "https://github.com/sa1l1/mites-python-project",
+    description: "Final project for the MITES Saturdays Computer Science program.",
+    techs: ["Tkinter", "Python", "Game Development"],
   },
+
   {
-    title: "Project 3",
-    href: "#",
-    techs: ["Next.js", "TypeScript", "TailWindCSS"],
-  },
-  {
-    title: "Project 4",
+    title: "GeoGrapher",
     description:
-      "Vulputate dignissim suspendisse in est ante in nibh mauris. Amet consectetur adipiscing elit pellentesque habitant morbi tristique",
+      "Geometric figure visualizer using xy coordinates. Currently in development.",
     isComingSoon: true,
-    techs: ["Nuxt.js", "TypeScript", "TailWindCSS"],
+    techs: ["Chart.js"],
   },
+
+  {
+    title: "To IPA: The API",
+    description:
+      "An API that converts English text to its International Phonetic Alphabet (IPA) equivalent. Currently in development.",
+    isComingSoon: true,
+    techs: ["Express.js"],
+  },
+
+
 ];

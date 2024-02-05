@@ -1,15 +1,10 @@
 import type { TIndexPageData } from "@/types/indexPageData";
-
-const today = new Date();
-
 const description =
-  "Lorem ipsum dolor sit amet, **consectetur adipiscing elit**, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, **quis nostrud exercitation** ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  "My name is **Salma**, I'm a sophomore in highschool who enjoys computer science, math and lingustics. I've recently gotten into competitive programming as well.";
 
-const footer = `© ${today.getFullYear()} / smcnikita`;
-
+const footer = "Welcome !1!";
 export const INDEX_PAGE_DATA: TIndexPageData = {
-  title: "Hi, I’m smcnikita 👋",
+  title: "Salma J.",
   description,
-  email: "example@example.com",
   footer,
 };
