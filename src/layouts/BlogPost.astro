@@ -19,7 +19,7 @@ const { title, description, pubDate, tags } = Astro.props;
 
       <div class="blog flex flex-col gap-3">
         <time datetime={pubDate.toISOString()} class="block">
-          {moment(pubDate).format("DD/MM/YYYY")}
+          {moment(pubDate).format("MM/DD/YYYY")}
         </time>
 
         <slot />
