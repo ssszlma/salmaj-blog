@@ -9,6 +9,6 @@ Hi! My name is Salma! I'm a sophomore in highschool who's been coding since I wa
 
 My interests lie in **Computer Science**, **Math**, and **Computational Linguistics**. 
 
-I regularly attend local competitions and [**hackathons**](https://www.easya.io/events/easya-x-polkadot-hackathon-usa), and I also compete in national olympiads like [NACLO](https://naclo.org/) and [USACO](https://usaco.org/).
+I regularly attend local competitions and [**hackathons**](https://www.easya.io/events/easya-x-polkadot-hackathon-usa), and I also compete in national olympiads like [**NACLO**](https://naclo.org/) and [**USACO**](https://usaco.org/).
 
 Thank you for visiting my blog and feel free to have a look at my [**projects**](https://www.salmaj.me/) !1!
