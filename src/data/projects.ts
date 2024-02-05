@@ -16,14 +16,6 @@ export const PROJECTS_DATA: TProjectItem[] = [
     href: "https://github.com/sa1l1/skincheck",
     techs: ["App", "AI", "Image Classification"],
   },
-
-  {
-    title: "More",
-    href: "https://github.com/sa1l1?tab=repositories",
-    description: "More (old) projects available on my github!",
-    techs: [" "],
-  },
-
   {
     title: "GeoGrapher",
     description:
@@ -38,6 +30,12 @@ export const PROJECTS_DATA: TProjectItem[] = [
       "An API that converts English text to its International Phonetic Alphabet (IPA) equivalent. Currently in development.",
     isComingSoon: true,
     techs: ["Express.js"],
+  },
+  {
+    title: "More",
+    href: "https://github.com/sa1l1?tab=repositories",
+    description: "More (old) projects available on my github!",
+    techs: [" "],
   },
 
 
