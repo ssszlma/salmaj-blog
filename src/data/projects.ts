@@ -8,7 +8,6 @@ export const PROJECTS_DATA: TProjectItem[] = [
     href: "https://github.com/sa1l1/TTT_Betting",
     techs: ["Gear", "Web3", "Crypto", "Blockchain"],
   },
-
   {
     title: "SkinCheck",
     description:
@@ -17,20 +16,13 @@ export const PROJECTS_DATA: TProjectItem[] = [
     techs: ["App", "AI", "Image Classification"],
   },
   {
-    title: "GeoGrapher",
-    description:
-      "Geometric figure visualizer using xy coordinates. Currently in development.",
-    isComingSoon: true,
-    techs: ["Chart.js"],
-  },
-
-  {
     title: "To IPA: The API",
     description:
       "An API that converts English text to its International Phonetic Alphabet (IPA) equivalent. Currently in development.",
     isComingSoon: true,
     techs: ["Express.js"],
   },
+  
   {
     title: "More",
     href: "https://github.com/sa1l1?tab=repositories",
