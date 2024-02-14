@@ -16,13 +16,6 @@ export const PROJECTS_DATA: TProjectItem[] = [
     techs: ["App", "AI", "Image Classification"],
   },
   {
-    title: "GeoGrapher",
-    description:
-      "A simple graph visualizer for genometric figures based on their coordinates",
-    href: "https://github.com/sa1l1/geographer",
-    techs: ["Geometry", "Math", "MatPlotLib"],
-  },
-  {
     title: "To IPA: The API",
     description:
       "An API that converts English text to its International Phonetic Alphabet (IPA) equivalent. Currently in development.",
