@@ -5,4 +5,4 @@ pubDate: "Feb 04 2024"
 tags: ["about", "intro", "info"]
 ---
 
-I'm gonna write this later
+I'm gonna write this later lol
