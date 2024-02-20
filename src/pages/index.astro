@@ -20,18 +20,11 @@ const description = transformText(INDEX_PAGE_DATA.description);
 
     <Title>{INDEX_PAGE_DATA.title}</Title>
 
-    <p set:html={description} class="" />
-  </div>
-
-  <section class="mt-6">
-    <LinksList />
-  </section>
-
   <section class="mt-6">
     <SubTitle>Projects</SubTitle>
 
     <div class="mt-3">
-      <ProjectsList />
+      <PostList />
     </div>
   </section>
 
